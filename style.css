@@ -1,0 +1,311 @@
+
+/* =========================
+   GENERAL SETTINGS
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b1020;
+    color: #ffffff;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================
+   HEADER & NAVIGATION
+========================= */
+header {
+    background: #121a2f;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    border-bottom: 1px solid #263451;
+}
+
+header h2 {
+    color: #c6ff3e;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+nav a {
+    color: #ffffff;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #c6ff3e;
+}
+
+/* =========================
+   HERO SECTIONS
+========================= */
+.hero {
+    min-height: 520px;
+    padding: 80px 8%;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(120deg, #101a35, #43216b, #11182b);
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 7vw, 80px);
+    line-height: 1.1;
+    margin-bottom: 25px;
+    font-weight: 900;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #e0e5f0;
+    max-width: 650px;
+    margin-bottom: 30px;
+}
+
+.art-hero {
+    background: linear-gradient(120deg, #241746, #762ba3, #111a32);
+}
+
+.sports-hero {
+    background: linear-gradient(120deg, #102b26, #14715c, #101b2d);
+}
+
+.career-hero {
+    background: linear-gradient(120deg, #31200c, #b96719, #172039);
+}
+
+.gallery-hero {
+    background: linear-gradient(120deg, #122038, #2456a0, #281a4c);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn {
+    display: inline-block;
+    background: #c6ff3e;
+    color: #101820;
+    padding: 13px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+    border: none;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    background: #ffffff;
+    box-shadow: 0 8px 25px rgba(198, 255, 62, 0.2);
+}
+
+/* =========================
+   INTRO SECTION
+========================= */
+.intro {
+    text-align: center;
+    padding: 70px 10%;
+}
+
+.intro h2 {
+    color: #c6ff3e;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    color: #c6ccda;
+    max-width: 900px;
+    margin: auto;
+    font-size: 18px;
+}
+
+/* =========================
+   CONTENT CARDS
+========================= */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 20px 8% 70px;
+}
+
+.card {
+    background: #151e33;
+    border: 1px solid #283651;
+    padding: 30px;
+    border-radius: 18px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #c6ff3e;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.card h2 {
+    color: #c6ff3e;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.card p {
+    color: #d0d6e3;
+}
+
+.card ul {
+    padding-left: 20px;
+    color: #d0d6e3;
+}
+
+.card li {
+    margin-bottom: 8px;
+}
+
+/* =========================
+   MOTIVATIONAL SECTION
+========================= */
+.motivation {
+    padding: 70px 10%;
+    text-align: center;
+    background: linear-gradient(120deg, #232b47, #38215b);
+}
+
+.motivation h2 {
+    color: #c6ff3e;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.motivation p {
+    max-width: 850px;
+    margin: auto;
+    font-size: 19px;
+    color: #e0e5f0;
+}
+
+/* =========================
+   GALLERY
+========================= */
+.gallery {
+    padding: 30px 8% 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    background: #151e33;
+    border-radius: 18px;
+    border: 1px solid #283651;
+    transition: 0.3s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-item h3 {
+    padding: 20px;
+    color: #c6ff3e;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #080d18;
+    color: #aab4c7;
+    border-top: 1px solid #263451;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 400px;
+        padding: 55px 7%;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .intro h2,
+    .motivation h2 {
+        font-size: 28px;
+    }
+
+    .cards {
+        padding: 15px 6% 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        gap: 12px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .card {
+        padding: 22px;
+    }
+}
